@@ -1,15 +1,7 @@
 version: '3'
 
 services:  
-  collectd:
-    container_name: qnap-collectd
-    image: zottelbeyer/qnap-collectd:latest
-    privileged: true
-    network_mode: host
-    volumes:
-      - /:/rootfs/:ro
-      - ./qnap-collectd/collectd.conf.d:/etc/collectd/collectd.conf.d/:ro    
-    restart: always
+
 
   influxdb:
     container_name: influxdb
